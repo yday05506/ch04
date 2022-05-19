@@ -39,7 +39,7 @@ int main(void) {
 	printf("2nd pop : %d\n", pop());
 	printf("3rd pop : %d\n", pop());
 
-	// 정상적으로 push() 됨
+	// 정상적으로 push()
 	push(80);
 
 	// 정상적으로 pop() 됨
