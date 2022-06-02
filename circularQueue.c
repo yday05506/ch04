@@ -1,9 +1,10 @@
 #include <stdio.h>
 #define SIZE 6
 
-int queue[SIZE] = { 0 };
+int cqueue[SIZE] = { 0 };
 int rear = -1;
 int front = 0;
+int cnt = 0;
 
 int main(void)
 {
@@ -31,23 +32,25 @@ int main(void)
 
 int add(int data)
 {
-	if (rear == SIZE - 1)
+	if (cnt == SIZE)
 	{
-		printf("Queue Overflow!\n");
+		printf("CQueue Overflow!\n");
 		return -1;
 	}
-	queue[++rear % SIZE] = data;	// Circular
+	cqueue[++rear % SIZE] = data;	// Circular
+	cnt++;
 
 	return 0;
 }
 
 int delete(void)
 {
-	if (rear < front)
+	if (cnt == 0)
 	{
-		printf("Queue Underflow!\n");
+		printf("CQueue Underflow!\n");
 		return -1;
 	}
+	cnt--;
 
-	return queue[front++ % SIZE];
+	return cqueue[front++ % SIZE];
 }
