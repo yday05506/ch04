@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mazeCreateRandom.c">
+    <ClCompile Include="QueueArray.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
